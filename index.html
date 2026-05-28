@@ -285,6 +285,89 @@
             animation: fadeUp 1s ease 0.7s forwards;
         }
 
+        .invite-copy {
+            max-width: 500px;
+            margin: 20px auto;
+            font-size: 20px;
+            line-height: 1.8;
+            color: rgba(245, 228, 176, 0.82);
+            font-style: italic;
+            text-align: center;
+        }
+
+        .family-section {
+            margin-top: 40px;
+        }
+
+        .family-title {
+            font-family: 'Cinzel', serif;
+            font-size: 11px;
+            letter-spacing: 0.22em;
+            color: var(--gold);
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            opacity: 0.75;
+        }
+
+        .family-names {
+            font-size: 15px;
+            color: rgba(245, 228, 176, 0.68);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .family-names small {
+            display: block;
+            margin-top: 6px;
+            font-size: 11px;
+            line-height: 1.6;
+            opacity: 0.7;
+        }
+
+        .ceremony-section {
+            padding: 14px 15px 10px;
+            text-align: center;
+        }
+
+        .ceremony-title {
+            font-family: 'Cinzel', serif;
+            font-size: 13px;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0px;
+        }
+
+        .ceremony-date {
+            font-family: 'Cinzel', serif;
+            font-size: 38px;
+            color: var(--ivory);
+            line-height: 1.3;
+        }
+
+        .ceremony-time {
+            font-size: 22px;
+            font-style: italic;
+            color: var(--gold-pale);
+            margin-top: 10px;
+        }
+
+        .ceremony-venue {
+            margin-top: 10px;
+        }
+
+        .ceremony-venue .venue-name {
+            margin-bottom: 10px;
+        }
+
+        .reveal-overlay {
+            animation: overlay-out 0.8s ease 1.8s forwards;
+        }
+
+        .venue-section {
+            padding: 20px 24px 20px;
+        }
+
         /* ── QURAN VERSE ── */
         .verse-block {
             background: rgba(201, 153, 58, 0.06);
@@ -411,15 +494,6 @@
             animation: fadeUp 1.2s ease 1.9s forwards;
         }
 
-        /* ── DATE SECTION ── */
-        .date-section {
-            padding: 10px 40px;
-            text-align: center;
-            position: relative;
-            opacity: 0;
-            animation: fadeUp 1s ease 2.1s forwards;
-        }
-
         .section-label {
             font-family: 'Cinzel', serif;
             font-size: 13.5px;
@@ -427,6 +501,10 @@
             color: var(--gold);
             text-transform: uppercase;
             margin-bottom: 16px;
+        }
+
+        .date-section {
+            padding: 10px 24px;
         }
 
         .date-display {
@@ -446,15 +524,6 @@
             position: relative;
         }
 
-        .date-num::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--gold), transparent);
-        }
 
         .date-month-year {
             text-align: left;
@@ -490,22 +559,12 @@
             letter-spacing: 0.05em;
         }
 
-
-
-        /* ── VENUE SECTION ── */
-        .venue-section {
-            padding: 10px 40px 25px;
-            text-align: center;
-            opacity: 0;
-            animation: fadeUp 1s ease 2.5s forwards;
-        }
-
         .venue-name {
             font-family: 'Cinzel', serif;
             font-size: 23px;
             color: var(--ivory);
             letter-spacing: 0.08em;
-            margin: 12px 0 6px;
+            margin: 5px;
         }
 
         .venue-detail {
@@ -529,6 +588,11 @@
         .btn-container {
             position: relative;
             display: inline-block;
+        }
+
+        .btn-container button {
+            display: block;
+            width: 100%;
         }
 
         .btn-action {
@@ -647,29 +711,6 @@
             width: 14px;
             height: 14px;
             fill: currentColor;
-        }
-
-        /* ── RSVP SECTION ── */
-        .rsvp-section {
-            margin: 0 40px 20px;
-            padding: 28px;
-            text-align: center;
-            background: rgba(201, 153, 58, 0.05);
-            border: 1px solid rgba(201, 153, 58, 0.25);
-            position: relative;
-            overflow: hidden;
-            opacity: 0;
-            animation: fadeUp 1s ease 2.7s forwards;
-        }
-
-        .rsvp-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--gold), transparent);
         }
 
         .rsvp-title {
@@ -810,7 +851,7 @@
         /* Responsive tweaks */
         @media (max-width: 480px) {
             .hero {
-                padding: 34px 24px 12px;
+                padding: 15px 15px 12px;
             }
 
             .date-section {
@@ -822,15 +863,11 @@
             }
 
             .venue-section {
-                padding: 12px 24px 20px;
-            }
-
-            .rsvp-section {
-                margin: 0 24px 20px;
+                padding: 10px;
             }
 
             .footer {
-                padding: 20px 24px 36px;
+                padding: 5px 15px 15px;
             }
 
             .verse-block {
@@ -1020,268 +1057,274 @@
 
             <!-- ── HERO ── -->
             <div class="hero">
+                <div class="hero">
 
-                <div class="bismillah">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
-
-                <div class="divider-ornament">
-                    <div class="line"></div>
-                    <div class="diamond-sm"
-                        style="width:3px;height:3px;background:var(--gold-lt);transform:rotate(45deg)"></div>
-                    <div class="diamond"></div>
-                    <div class="diamond-sm"
-                        style="width:3px;height:3px;background:var(--gold-lt);transform:rotate(45deg)"></div>
-                    <div class="line"></div>
-                </div>
-
-                <div class="invite-label">With the blessings of Allah</div>
-
-                <!-- Groom's family -->
-                <div class="family-intro">✦ Son of ✦</div>
-                <div class="family-names">
-                    <span>Mohammed Abdul Khader</span> &amp; <span>Shehna MohammedAli</span><br>
-                    <small style="font-size:12px; color: rgba(245,228,176,0.45); letter-spacing:0.05em;">Grandson of
-                        T.H. Mohammed Jalal &amp; Jameela Jalal · Late Mohammed Ali &amp; Noorjahan</small>
-                </div>
-
-                <!-- Groom & Bride names -->
-                <div class="couple-wrap">
-                    <div class="groom-name">Mohammed Suhail</div>
-                    <span class="ampersand">&amp;</span>
-                    <div class="bride-name">Fathima Farzana</div>
-                </div>
-
-                <!-- Bride's family -->
-                <div class="family-block-2">
-                    <div class="family-intro" style="opacity:1; animation: none; margin-top:16px;">✦ Daughter of ✦</div>
-                    <div class="family-names" style="opacity:1; animation:none;">
-                        <span>Shahul Shameem</span> &amp; <span>Zeena Shameem</span><br>
-                        <small
-                            style="font-size:12px; color: rgba(245,228,176,0.45); letter-spacing:0.08em;">Granddaughter
-                            of Dr. Athilappa Rawther &amp; Mrs. Subaida · Mr. K. Abdul Karim &amp; Mrs. Laila
-                        </small>
+                    <div class="bismillah">
+                        بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
                     </div>
-                </div>
 
-            </div>
-
-            <!-- ── DATE & TIME ── -->
-            <div class="date-section">
-                <div class="section-label">Date &amp; Time</div>
-
-                <div class="divider-ornament" style="opacity:1;animation:none;">
-                    <div class="line"></div>
-                    <div class="diamond"></div>
-                    <div class="line"></div>
-                </div>
-
-                <div class="date-display">
-                    <div class="date-num">19</div>
-                    <div class="date-separator">◆</div>
-                    <div class="date-month-year">
-                        <span class="date-month">July</span>
-                        <span class="date-year">2026</span>
+                    <div class="divider-ornament">
+                        <div class="line"></div>
+                        <div class="diamond-sm"></div>
+                        <div class="diamond"></div>
+                        <div class="diamond-sm"></div>
+                        <div class="line"></div>
                     </div>
+
+                    <div class="invite-label">
+                        With the blessings of Allah
+                    </div>
+
+                    <!-- Invitation Copy -->
+                    <div class="invite-copy">
+                        Together with our families,<br>
+                        we request the honour of your presence<br>
+                        as we celebrate our marriage ceremony.
+                    </div>
+
+                    <!-- Couple Names -->
+                    <div class="couple-wrap">
+                        <div class="groom-name">Mohammed Suhail</div>
+                        <span class="ampersand">&amp;</span>
+                        <div class="bride-name">Fathima Farzana</div>
+                    </div>
+
+                    <!-- Family Details -->
+                    <div class="family-section">
+
+                        <div class="family-title">Son of</div>
+
+                        <div class="family-names">
+                            Mohammed Abdul Khader &amp; Shehna MohammedAli
+
+                            <small>
+                                Grandson of T.H. Mohammed Jalal &amp; Jameela Jalal ·
+                                Late Mohammed Ali &amp; Noorjahan
+                            </small>
+                        </div>
+                    </div>
+
+                    <div class="family-section">
+                        <div class="family-title">Daughter of</div>
+
+                        <div class="family-names">
+                            Shahul Shameem &amp; Zeena Shameem
+
+                            <small>
+                                Granddaughter of Dr. Athilappa Rawther &amp; Mrs. Subaida ·
+                                Mr. K. Abdul Karim &amp; Mrs. Laila
+                            </small>
+                        </div>
+                    </div>
+
+
                 </div>
 
-                <div class="time-display">Sunday · 6:30 in the Evening</div>
+                <div class="ceremony-section">
 
-                <div class="divider-ornament" style="opacity:1;animation:none;margin-top:16px;">
-                    <div class="line"></div>
-                    <div class="diamond-sm"
-                        style="width:3px;height:3px;background:var(--gold-lt);transform:rotate(45deg)"></div>
-                    <div class="diamond"></div>
-                    <div class="diamond-sm"
-                        style="width:3px;height:3px;background:var(--gold-lt);transform:rotate(45deg)"></div>
-                    <div class="line"></div>
-                </div>
-            </div>
 
-            <!-- ── VENUE ── -->
-            <div class="venue-section">
-                <div class="section-label">Venue</div>
-                <div class="venue-name">Vijaya International Convention Centre</div>
-                <div class="venue-detail">
-                    Perumthuruthy P.O., Ezhinjillam<br>
-                    Thiruvalla, Pathanamthitta, Kerala — 689107
-                </div>
 
-                <div class="venue-actions">
-                    <!-- Google Maps Button -->
-                    <a href="https://www.google.com/maps/search/?api=1&query=Vijaya+International+Convention+Centre+Thiruvalla"
-                        target="_blank" rel="noopener" class="btn-action">
-                        <svg viewBox="0 0 24 24">
-                            <path
-                                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-                        </svg>
-                        Google Maps
-                    </a>
+                    <!-- ── DATE & TIME ── -->
+                    <div class="date-section">
+                        <div class="divider-ornament" style="opacity:1;animation:none;margin-top:16px;">
+                            <div class="line"></div>
+                            <div class="diamond-sm"
+                                style="width:3px;height:3px;background:var(--gold-lt);transform:rotate(45deg)"></div>
+                            <div class="diamond"></div>
+                            <div class="diamond-sm"
+                                style="width:3px;height:3px;background:var(--gold-lt);transform:rotate(45deg)"></div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="section-label">Date &amp; Time</div>
 
-                    <!-- Add to Calendar Button with Dropdown -->
-                    <div class="btn-container">
-                        <button class="btn-action" id="calendar-btn">
-                            <svg viewBox="0 0 24 24">
-                                <path
-                                    d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zM7 11h5v5H7z" />
-                            </svg>
-                            Add to Calendar
-                        </button>
-                        <div class="dropdown-menu" id="calendar-dropdown">
-                            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+of+Mohammed+Suhail+%26+Fathima+Farzana&dates=20260719T183000/20260719T223000&details=With+the+blessings+of+Allah%2C+we+invite+you+to+celebrate+the+wedding+of+Mohammed+Suhail+%26+Fathima+Farzana.&location=Vijaya+International+Convention+Centre%2C+Ezhinjillam%2C+Thiruvalla%2C+Kerala+-+689107%2C+India"
-                                target="_blank" rel="noopener" class="dropdown-item">
-                                <svg viewBox="0 0 24 24">
-                                    <path
-                                        d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM9 9.5h8v2H9z" />
-                                </svg>
-                                Google Calendar
-                            </a>
-                            <div class="dropdown-item" id="download-ics-item">
-                                <svg viewBox="0 0 24 24">
-                                    <path
-                                        d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z" />
-                                </svg>
-                                Download .ics file
+                        <div class="date-display">
+                            <div class="date-num">19</div>
+                            <div class="date-separator">◆</div>
+                            <div class="date-month-year">
+                                <span class="date-month">July</span>
+                                <span class="date-year">2026</span>
+                            </div>
+                        </div>
+
+                        <div class="time-display">Sunday · 6:30 in the Evening</div>
+
+
+                    </div>
+
+                    <div class="venue-section">
+                        <div class="divider-ornament" style="opacity:1;animation:none;margin-top:16px;">
+                            <div class="line"></div>
+                            <div class="diamond-sm"
+                                style="width:3px;height:3px;background:var(--gold-lt);transform:rotate(45deg)"></div>
+                            <div class="diamond"></div>
+                            <div class="diamond-sm"
+                                style="width:3px;height:3px;background:var(--gold-lt);transform:rotate(45deg)"></div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="ceremony-title">
+                            Venue
+                        </div>
+
+                        <div class="ceremony-venue">
+
+                            <div class="venue-name">
+                                Vijaya International Convention Centre
+                            </div>
+
+                            <div class="venue-detail">
+                                Perumthuruthy P.O., Ezhinjillam<br>
+                                Thiruvalla, Pathanamthitta, Kerala — 689107
+                            </div>
+
+                        </div>
+
+                        <div class="venue-actions">
+                            <div class="btn-container">
+                                <a href="https://www.google.com/maps/search/?api=1&query=Vijaya+International+Convention+Centre+Thiruvalla"
+                                    target="_blank" rel="noopener" class="btn-action">
+
+                                    Google Maps
+                                </a>
+                            </div>
+
+                            <div class="btn-container">
+
+                                <button class="btn-action" id="calendar-btn">
+                                    Add to Calendar
+                                </button>
+
+                                <div class="dropdown-menu" id="calendar-dropdown">
+
+                                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+of+Mohammed+Suhail+%26+Fathima+Farzana&dates=20260719T183000/20260719T223000"
+                                        target="_blank" rel="noopener" class="dropdown-item">
+
+                                        Google Calendar
+                                    </a>
+
+                                    <div class="dropdown-item" id="download-ics-item">
+                                        Download .ics file
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Ornament divider -->
-            <div class="divider-ornament" style="opacity:1;animation:none;margin: 0 40px;">
-                <div class="line"></div>
-                <div class="diamond-sm" style="width:3px;height:3px;background:var(--gold-lt);transform:rotate(45deg)">
-                </div>
-                <div class="diamond"></div>
-                <div class="diamond-sm" style="width:3px;height:3px;background:var(--gold-lt);transform:rotate(45deg)">
-                </div>
-                <div class="line"></div>
-            </div>
 
-            <!-- ── RSVP ── -->
-            <div class="rsvp-section">
-                <div class="rsvp-title">We Await Your Presence</div>
-                <div class="rsvp-text">
-                    We humbly request the honour of your presence.<br>
-                    Please reach out to confirm your attendance.
-                </div>
-                <a href="tel:+918606199621" class="rsvp-phone">+91 86061 99621</a>
-                <div class="venue-actions" style="margin-top: 16px;">
-                    <a href="https://wa.me/918606199621?text=Assalamu%20Alaikum%2C%20I%20will%20be%20attending%20the%20wedding%20of%20Mohammed%20Suhail%20%26%20Fathima%20Farzana%20on%2019th%20July%202026."
-                        target="_blank" rel="noopener" class="btn-action" id="whatsapp-rsvp-btn">
-                        <svg viewBox="0 0 24 24">
-                            <path
-                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-                        </svg>
-                        WhatsApp RSVP
-                    </a>
-                </div>
-            </div>
+                <!-- ── FOOTER ── -->
+                <div class="footer">
 
-            <!-- ── FOOTER ── -->
-            <div class="footer">
+                    <!-- Quran Verse -->
+                    <div class="verse-block" style="margin-top: 24px;">
+                        <div class="verse-arabic">
+                            وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا
+                            لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً
+                        </div>
 
-                <!-- Quranic Verse -->
-                <div class="verse-block">
-                    <div class="verse-arabic">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا
-                        لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً</div>
-                    <div class="verse-translation">"And of His signs is that He created for you from yourselves mates
-                        that you may find tranquillity in them; and He placed between you affection and mercy."</div>
-                    <div class="verse-ref">— Surah Ar-Rum, 30:21</div>
+                        <div class="verse-translation">
+                            “And of His signs is that He created for you from yourselves mates
+                            that you may find tranquillity in them; and He placed between you affection and mercy.”
+                        </div>
+
+                        <div class="verse-ref">
+                            — Surah Ar-Rum, 30:21
+                        </div>
+                    </div>
+
+                    <div class="footer-dua">بَارَكَ اللهُ لَكُمْ</div>
+                    <div class="footer-text">May Allah bless this union with love, mercy, and His blessings</div>
+
+                    <!-- Bottom arch SVG -->
+                    <svg viewBox="0 0 680 60" xmlns="http://www.w3.org/2000/svg"
+                        style="width:100%;margin-top:24px;opacity:0.5">
+                        <path d="M0,60 L0,40 Q170,20 340,30 Q510,20 680,40 L680,60 Z" fill="rgba(30,10,5,0.8)" />
+                        <line x1="40" y1="2" x2="640" y2="2" stroke="#C9993A" stroke-width="0.5" opacity="0.4" />
+                        <circle cx="340" cy="2" r="3" fill="#C9993A" opacity="0.5" />
+                        <circle cx="200" cy="2" r="1.5" fill="#C9993A" opacity="0.3" />
+                        <circle cx="480" cy="2" r="1.5" fill="#C9993A" opacity="0.3" />
+                    </svg>
                 </div>
 
-                <div class="footer-dua">بَارَكَ اللهُ لَكُمْ</div>
-                <div class="footer-text">May Allah bless this union with love, mercy, and His blessings</div>
+            </div><!-- .card -->
+        </div><!-- .page-wrap -->
 
-                <!-- Bottom arch SVG -->
-                <svg viewBox="0 0 680 60" xmlns="http://www.w3.org/2000/svg"
-                    style="width:100%;margin-top:24px;opacity:0.5">
-                    <path d="M0,60 L0,40 Q170,20 340,30 Q510,20 680,40 L680,60 Z" fill="rgba(30,10,5,0.8)" />
-                    <line x1="40" y1="2" x2="640" y2="2" stroke="#C9993A" stroke-width="0.5" opacity="0.4" />
-                    <circle cx="340" cy="2" r="3" fill="#C9993A" opacity="0.5" />
-                    <circle cx="200" cy="2" r="1.5" fill="#C9993A" opacity="0.3" />
-                    <circle cx="480" cy="2" r="1.5" fill="#C9993A" opacity="0.3" />
-                </svg>
-            </div>
+        <script>
+            // Generate floating particle sparks
+            (function () {
+                const container = document.getElementById('particles');
+                const positions = [8, 15, 22, 30, 38, 45, 55, 62, 70, 78, 85, 92];
+                positions.forEach((left, i) => {
+                    const p = document.createElement('div');
+                    p.className = 'particle';
+                    p.style.cssText = `left:${left}%; bottom:${10 + Math.random() * 60}%; --dur:${3 + Math.random() * 4}s; --delay:${Math.random() * 6}s; --drift:${(Math.random() - 0.5) * 30}px;`;
+                    container.appendChild(p);
+                });
+            })();
 
-        </div><!-- .card -->
-    </div><!-- .page-wrap -->
-
-    <script>
-        // Generate floating particle sparks
-        (function () {
-            const container = document.getElementById('particles');
-            const positions = [8, 15, 22, 30, 38, 45, 55, 62, 70, 78, 85, 92];
-            positions.forEach((left, i) => {
-                const p = document.createElement('div');
-                p.className = 'particle';
-                p.style.cssText = `left:${left}%; bottom:${10 + Math.random() * 60}%; --dur:${3 + Math.random() * 4}s; --delay:${Math.random() * 6}s; --drift:${(Math.random() - 0.5) * 30}px;`;
-                container.appendChild(p);
+            // Pauses CSS animations when the tab goes out of focus to save mobile battery
+            document.addEventListener('visibilitychange', () => {
+                document.body.classList.toggle('tab-hidden', document.hidden);
             });
-        })();
 
-        // Pauses CSS animations when the tab goes out of focus to save mobile battery
-        document.addEventListener('visibilitychange', () => {
-            document.body.classList.toggle('tab-hidden', document.hidden);
-        });
+            // Add to Calendar Dropdown and ICS dynamic download logic
+            (function () {
+                const calendarBtn = document.getElementById('calendar-btn');
+                const calendarDropdown = document.getElementById('calendar-dropdown');
+                const downloadIcsItem = document.getElementById('download-ics-item');
 
-        // Add to Calendar Dropdown and ICS dynamic download logic
-        (function () {
-            const calendarBtn = document.getElementById('calendar-btn');
-            const calendarDropdown = document.getElementById('calendar-dropdown');
-            const downloadIcsItem = document.getElementById('download-ics-item');
+                if (calendarBtn && calendarDropdown) {
+                    // Toggle dropdown menu
+                    calendarBtn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        calendarDropdown.classList.toggle('active');
+                    });
 
-            if (calendarBtn && calendarDropdown) {
-                // Toggle dropdown menu
-                calendarBtn.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    calendarDropdown.classList.toggle('active');
-                });
-
-                // Close dropdown when clicking outside
-                document.addEventListener('click', () => {
-                    calendarDropdown.classList.remove('active');
-                });
-
-                // Prevent close when clicking inside dropdown
-                calendarDropdown.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                });
-            }
-
-            if (downloadIcsItem) {
-                downloadIcsItem.addEventListener('click', () => {
-                    const calendarData = [
-                        'BEGIN:VCALENDAR',
-                        'VERSION:2.0',
-                        'PRODID:-//Suhail and Fathima Wedding//NONSGML v1.0//EN',
-                        'BEGIN:VEVENT',
-                        'CLASS:PUBLIC',
-                        'DESCRIPTION:With the blessings of Allah, we invite you to celebrate the wedding of Mohammed Suhail & Fathima Farzana.',
-                        'DTSTART:20260719T183000', // Local time (No Z suffix)
-                        'DTEND:20260719T223000',   // Local time (No Z suffix)
-                        'LOCATION:Vijaya International Convention Centre, Ezhinjillam, Thiruvalla, Kerala - 689107, India',
-                        'SUMMARY:Wedding: Suhail & Fathima',
-                        'TRANSP:OPAQUE',
-                        'END:VEVENT',
-                        'END:VCALENDAR'
-                    ].join('\r\n');
-
-                    const blob = new Blob([calendarData], { type: 'text/calendar;charset=utf-8;' });
-                    const link = document.createElement('a');
-                    link.href = URL.createObjectURL(blob);
-                    link.setAttribute('download', 'wedding_suhail_fathima.ics');
-                    document.body.appendChild(link);
-                    link.click();
-                    document.body.removeChild(link);
-
-                    // Close dropdown after download
-                    if (calendarDropdown) {
+                    // Close dropdown when clicking outside
+                    document.addEventListener('click', () => {
                         calendarDropdown.classList.remove('active');
-                    }
-                });
-            }
-        })();
-    </script>
+                    });
+
+                    // Prevent close when clicking inside dropdown
+                    calendarDropdown.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                    });
+                }
+
+                if (downloadIcsItem) {
+                    downloadIcsItem.addEventListener('click', () => {
+                        const calendarData = [
+                            'BEGIN:VCALENDAR',
+                            'VERSION:2.0',
+                            'PRODID:-//Suhail and Fathima Wedding//NONSGML v1.0//EN',
+                            'BEGIN:VEVENT',
+                            'CLASS:PUBLIC',
+                            'DESCRIPTION:With the blessings of Allah, we invite you to celebrate the wedding of Mohammed Suhail & Fathima Farzana.',
+                            'DTSTART:20260719T183000', // Local time (No Z suffix)
+                            'DTEND:20260719T223000',   // Local time (No Z suffix)
+                            'LOCATION:Vijaya International Convention Centre, Ezhinjillam, Thiruvalla, Kerala - 689107, India',
+                            'SUMMARY:Wedding: Suhail & Fathima',
+                            'TRANSP:OPAQUE',
+                            'END:VEVENT',
+                            'END:VCALENDAR'
+                        ].join('\r\n');
+
+                        const blob = new Blob([calendarData], { type: 'text/calendar;charset=utf-8;' });
+                        const link = document.createElement('a');
+                        link.href = URL.createObjectURL(blob);
+                        link.setAttribute('download', 'wedding_suhail_fathima.ics');
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
+
+                        // Close dropdown after download
+                        if (calendarDropdown) {
+                            calendarDropdown.classList.remove('active');
+                        }
+                    });
+                }
+            })();
+        </script>
 </body>
 
 </html>
