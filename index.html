@@ -1361,9 +1361,14 @@
             (function () {
                 const directionsBtn = document.getElementById('directions-btn');
                 const directionsDropdown = document.getElementById('directions-dropdown');
+                const calendarDropdown = document.getElementById('calendar-dropdown');
 
                 if (directionsBtn && directionsDropdown) {
                     directionsBtn.addEventListener('click', (e) => {
+                        // close the calendar drop down if its active
+                        if (calendarDropdown) {
+                            calendarDropdown.classList.remove('active');
+                        }
                         e.stopPropagation();
                         directionsDropdown.classList.toggle('active');
                     });
@@ -1386,10 +1391,15 @@
                 const calendarBtn = document.getElementById('calendar-btn');
                 const calendarDropdown = document.getElementById('calendar-dropdown');
                 const downloadIcsItem = document.getElementById('download-ics-item');
+                const directionsDropdown = document.getElementById('directions-dropdown');
 
                 if (calendarBtn && calendarDropdown) {
                     // Toggle dropdown menu
                     calendarBtn.addEventListener('click', (e) => {
+                        // close the directions drop down if its active
+                        if (directionsDropdown) {
+                            directionsDropdown.classList.remove('active');
+                        }
                         e.stopPropagation();
                         calendarDropdown.classList.toggle('active');
                     });
